@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+:root {
+    --grey1: #f4f5f8;
+    --grey2: #f8f9fb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.html, .body {
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ################################################# */
+/* ## General */
+/* ################################################# */
+
+.page {
+    min-height: 100vh;
+    background-color: var(--grey1);
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-bar {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.display-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 16px;
+    border: solid 1px #888;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    gap: 5px;
+    padding: 3px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.kanban-container {
+    display: flex;
+    flex-direction: row;
+    max-height: calc(100vh - 57px);
+    overflow: hidden;
+    padding: 20px 3vw;
+    align-items: start;
+    box-sizing: border-box;
+    gap: 3vw;
+    overflow: scroll;
+}
+
+
+/* ################################################# */
+/* ## Card */
+/* ################################################# */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 375px;
+    max-width: 375px;
+    box-sizing: border-box;
+}
+
+.card-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-id {
+    font-size: 15px;
+    color: #888;
+    margin-right: auto;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+    gap: 10px;
+    padding: 15px 0; 
+}
+
+.card-checkbox {
+    font-size: 23px;
+    color: #5d69d1;
+}
+
+.card-title {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+    width: 85%;
+    color: #2a2c32;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    
+}
+
+
+/* ################################################# */
+/* ## Tag */
+/* ################################################# */
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #bbb;
+    border-radius: 6px;
+    padding: 4px;
+    gap: 5px;
+}
+
+.tag-icon, .tag-desc {
+    font-size: 13px;
+    color: #9d9d9d
+}
+
+.tag-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+
+/* ################################################# */
+/* ## Card Column */
+/* ################################################# */
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 375px;
+    width: 375px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.card-column-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.card-column-title {
+    font-size: 16px;
+}
+
+.card-column-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-column-add {
+    margin-left: auto;
+}
+
+.card-column-count, .card-column-add, .card-column-menu {
+    color: #888;
+}
+
+.card-column-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
 }
